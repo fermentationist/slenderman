@@ -1,0 +1,25 @@
+{
+  "name": "thinner",
+  "version": "0.0.1",
+  "description": "thinner clones and installs thinner-template, a simple Svelte app template",
+  "main": "thinner.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fermentationist/thinner.git"
+  },
+  "keywords": [
+    "svelte",
+    "template",
+    "webpack",
+    "svelte-loader"
+  ],
+  "author": "fermentationist",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fermentationist/thinner/issues"
+  },
+  "homepage": "https://github.com/fermentationist/thinner#readme"
+}
