@@ -1,11 +1,12 @@
 #! /usr/bin/env node
+
 const {execSync} = require("child_process");
 const fs = require("fs");
 const path = require("path");
 const chalk = require("chalk");
 
 const APPNAME = process.argv[2] ? process.argv[2] : "mySvelteApp"; // the name of the directory that will be created to house the new app
-const dir = path.resolve(__dirname, APPNAME);
+const dir = path.resolve(process.cwd());
 
 const commands = [ // list of bash commands to clone and initialize new app from template
     `mkdir ${APPNAME}`,

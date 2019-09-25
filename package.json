@@ -4,7 +4,8 @@
   "description": "thinner clones and installs thinner-template, a simple Svelte app template",
   "main": "thinner.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c -o dist/devicon-react-svg.min.js"
   },
   "bin": {
     "thinner": "thinner.js"
@@ -28,5 +29,13 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "init-package-json": "^1.10.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "rollup": "^1.21.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-preserve-shebang": "^0.1.6",
+    "rollup-plugin-uglify": "^6.0.3"
   }
 }
