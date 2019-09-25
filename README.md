@@ -1,85 +1,61 @@
 # thinner
 
-**thinner** is a fast way to install a simple Svelte app. It uses `degit` to clone a template repository [(`thinner-template`)](https://github.com/fermentationist/thinner-template.git) that is webpack-based (it uses [`svelte-loader`)](https://www.npmjs.com/package/svelte-loader) with `degit`, initializes it as a new git repo, installs npm and package dependencies, and then it automatically spins up a development server.
+**thinner** is a fast and easy way to create a basic [**Svelte**](https://svelte.dev) app. With a single command, you will have a running app, that you can then take apart and reassemble as you wish.
 
-**thinner** returns a functional React component that, when passed the name of a Devicon as the `icon` prop, will render it as an inline SVG (Scalable Vector Graphics) image.
+The app is set up to use [**Webpack**](https://webpack.js.org/), with [**svelte-loader**](https://www.npmjs.com/package/svelte-loader), to compile your code. [**Webpack-dev-server**](https://www.npmjs.org/package/webpack-dev-server) will start up automatically to serve your app, and watch your files for changes (hot reloading!).
 
 ---
-## Installation
-To install with **npm**:
+
+## Installation and usage
+**thinner** may be installed globally or locally, and then called from the command line when you wish to create a new Svelte application.
+
+Install globally with **npm**:
 ```bash
-npm install thinner
+npm install -g thinner
 ```
-To install with **Yarn**:
+Then call **thinner** with your app's name as an optional argument. If no name is chosen, the new directory will be given the default name *mySvelteApp*.
 ```bash
-yarn add thinner
+thinner exampleApp
+```
+*Alternately, you may run **thinner** without installing it by using `npx`
+```bash
+npx thinner exampleApp
 ```
 ---
-## Usage
-Import the default export from **thinner** and use it in your JSX as you would any other React component. It accepts the prop `icon`, which should be the name of the Devicon as a string.
+## What it does
 
-```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import DevIcon from "thinner";
+There is nothing fancy going on here; **thinner** merely executes some bash scripts synchronously:
 
-const Demo = props => {
-    return (<DevIcon icon="react" />);
-}
+- `mkdir APPNAME`
+This creates a new directory, with the name chosen by the user at runtime, or else, the default name *mySvelteApp*. If a directory with that name already exists, the program exits with an error.
 
-ReactDOM.render(<Demo/>, document.getElementById('root'));
-```
----
-You can style the SVG component by passing in a `style` prop or a `viewBox` prop, like this...
+- `npx degit fermentationist/thinner-template`
+This command uses [**degit**](https://www.npmjs.com/package/degit) to clone the  [template repository](https://github.com/fermentationist/thinner-template) locally, creating the app.
 
-```js 
-const devIconStyle = {
-    fill: "thistle",
-    width: "150px",
-};
+- `git init`
+The directory is initialized as a Git repository.
 
-const Demo = props => {
-    return (
-        <DevIcon icon="react" style={devIconStyle} viewBox="0 0 32 32"/>
-        );
-}
-```
-or by using a library like **[styled-components](https://www.npmjs.com/package/styled-components)**...
+- `npm init -y`
+npm is installed and a package.json manifest file is created.
 
-```js 
-import styled from "styled-components";
+- `npm install`
+The app's dependencies are installed.
 
-const StyledIcon = styled(DevIcon)`
-    fill: thistle;
-    width: 150px;
-`;
+- `npm start`
+This script will initiate a Webpack build, start up the development server, and launch http://localhost:9000 in the default browser.
 
-const Demo = props => {
-    return (<StyledIcon icon="css3" />);
-}
-```
----
-## Additional exports
-A list of the icon names accepted by the component can be found in the [Devicons cheatsheet](http://vorillaz.github.io/devicons/#/cheat), or can be returned as an array by using the package's `iconList` export. **thinner** also exports the `RandomIcon` component to display a randomly chosen icon.
+Once this short script has executed, you will have a running Svelte app!
 
-```js
-import DevIcon, {iconList, RandomIcon} from "thinner";
 
-console.log(`Here is a list of icon names used by this component: ${iconList}`);
 
-const Demo = props => {
-    return (<RandomIcon />);
-}
-```
 
 ---
 ## Credits
 
-**thinner** was made by Dennis Hodges, a Javascript developer.
+**thinner**, and [**thinner-template**](https://github.com/fermentationist/thinner-template) were made by [**Dennis Hodges**](https://dennis-hodges.com), a Javascript developer.
 
-Thank you to [Theodore Vorillas](https://www.vorillaz.com/), who created the font and icon collection that this component is based on, and which is the source of all of the svg path data used in this package.
+[**Svelte**](https://svelte.dev) was made by a very smart fellow named [**Rich Harris**](https://github.com/Rich-Harris). Thanks, Rich!
 
-You can find his original icon repository here: [Devicons](https://github.com/vorillaz/devicons).
 
 ---
 ## License

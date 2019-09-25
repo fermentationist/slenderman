@@ -9,7 +9,7 @@ const dir = path.resolve(__dirname, APPNAME);
 
 const commands = [ // list of bash commands to clone and initialize new app from template
     `mkdir ${APPNAME}`,
-    `cd ${APPNAME} && npx degit fermentationist/thinner-template --force`, // degit clones template repo
+    `cd ${APPNAME} && npx degit fermentationist/thinner-template`, // degit clones template repo
     `cd ${APPNAME} && git init`,
     `cd ${APPNAME} && npm init -y`,
     `cd ${APPNAME} && npm install`,
