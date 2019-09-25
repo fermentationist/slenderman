@@ -5,7 +5,7 @@
   "main": "thinner.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c -o dist/devicon-react-svg.min.js"
+    "build": "rollup -c -o dist/thinner.min.js"
   },
   "bin": {
     "thinner": "dist/thinner.min.js"
