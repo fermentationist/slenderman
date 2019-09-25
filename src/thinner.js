@@ -1,6 +1,6 @@
 /* 
 #! /usr/bin/env node
---this shebang is needed for cli usage, but it breaks rollup. will instead be added after processing, by output.footer setting (see rollup.config.js)
+this shebang is needed for cli usage, but it breaks rollup. will instead be added after processing, by output.banner setting (see rollup.config.js)
 */
 
 const {execSync} = require("child_process");
@@ -9,7 +9,7 @@ const path = require("path");
 const chalk = require("chalk");
 
 const APPNAME = process.argv[2] ? process.argv[2] : "mySvelteApp"; // the name of the directory that will be created to house the new app
-const dir = path.resolve(process.cwd());
+const dir = path.resolve(process.cwd(), APPNAME);
 
 const commands = [ // list of bash commands to clone and initialize new app from template
     `mkdir ${APPNAME}`,

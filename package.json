@@ -8,7 +8,7 @@
     "build": "rollup -c -o dist/devicon-react-svg.min.js"
   },
   "bin": {
-    "thinner": "thinner.js"
+    "thinner": "dist/thinner.min.js"
   },
   "repository": {
     "type": "git",
