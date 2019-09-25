@@ -1,4 +1,7 @@
+/* 
 #! /usr/bin/env node
+--this shebang is needed for cli usage, but it breaks rollup. will instead be added after processing, by output.footer setting (see rollup.config.js)
+*/
 
 const {execSync} = require("child_process");
 const fs = require("fs");
