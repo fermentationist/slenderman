@@ -60,7 +60,7 @@ Once this short script has executed, you will have a running Svelte app!
 ---
 ## License
 
-#### Copyright © 2019 [Dennis Hodges](https://github.com/fermentationist) 
+#### Copyright © 2019 [**Dennis Hodges**](https://github.com/fermentationist) 
 
 
 __The MIT License__
