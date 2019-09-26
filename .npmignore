@@ -1,8 +1,8 @@
-/node_modules
-/test
-/dev
-/src
-/mySvelteApp
+node_modules/**
+test/**
+dev/**
+src/**
+svelteApp/**
 
 .gitignore
 .babelrc

@@ -8,12 +8,12 @@ const fs = require("fs");
 const path = require("path");
 const chalk = require("chalk");
 
-const APPNAME = process.argv[2] ? process.argv[2] : "mySvelteApp"; // the name of the directory that will be created to house the new app
+const APPNAME = process.argv[2] ? process.argv[2] : "svelteApp"; // the name of the directory that will be created to house the new app
 const dir = path.resolve(process.cwd(), APPNAME);
 
 const commands = [ // list of bash commands to clone and initialize new app from template
     `mkdir ${APPNAME}`,
-    `cd ${APPNAME} && npx degit fermentationist/thinner-template`, // degit clones template repo
+    `cd ${APPNAME} && npx degit fermentationist/slender-template`, // degit clones template repo
     `cd ${APPNAME} && git init`,
     `cd ${APPNAME} && npm init -y`,
     `cd ${APPNAME} && npm install`,
@@ -30,7 +30,7 @@ fs.stat(dir, (err, stats) => { // will return an error if dirname does not exist
             console.log(chalk.blue("Starting up development server on http://localhost:9000..."));
         }
         execSync(cmd);
-        console.log(chalk.green(`Executing bash command - ${cmd}...`))
+        console.log(chalk.green(`Bash command - ${cmd} – has been executed.`))
     });
 })
 

@@ -1,36 +1,40 @@
-# thinner
+# *slenderman*
 
-**thinner** is a fast and easy way to create a basic [**Svelte**](https://svelte.dev) app. With a single command, you will have a running app, that you can then take apart and reassemble as you wish.
+**slenderman** is a fast and easy way to create a basic [**Svelte**](https://svelte.dev) app. With a single command, you will have a running app, that you can then take apart and reassemble as you wish.
 
 The app is set up to use [**Webpack**](https://webpack.js.org/), with [**svelte-loader**](https://www.npmjs.com/package/svelte-loader), to compile your code. [**Webpack-dev-server**](https://www.npmjs.org/package/webpack-dev-server) will start up automatically to serve your app, and watch your files for changes (hot reloading!).
 
 ---
 
 ## Installation and usage
-**thinner** may be installed globally or locally, and then called from the command line when you wish to create a new Svelte application.
+**slenderman** may be installed globally or locally, and then called from the command line when you wish to create a new Svelte application.
 
 Install globally with **npm**:
 ```bash
-npm install -g thinner
+npm install -g slenderman
 ```
-Then call **thinner** with your app's name as an optional argument. If no name is chosen, the new directory will be given the default name *mySvelteApp*.
+Then call **slenderman** with your app's name as an argument:
 ```bash
-thinner exampleApp
+slenderman exampleApp
 ```
-*Alternately, you may run **thinner** without installing it by using `npx`
+Or, you may allow the use the default directory name, *svelteApp* and just type:
 ```bash
-npx thinner exampleApp
+slenderman
+```
+*Alternately, you may run **slenderman** without installing it by using `npx`
+```bash
+npx slenderman exampleApp
 ```
 ---
 ## What it does
 
-There is nothing fancy going on here; **thinner** merely executes some bash scripts synchronously:
+There is nothing fancy going on here; **slenderman** merely executes some bash scripts synchronously:
 
 - `mkdir APPNAME`
-This creates a new directory, with the name chosen by the user at runtime, or else, the default name *mySvelteApp*. If a directory with that name already exists, the program exits with an error.
+This creates a new directory, with the name chosen by the user at runtime, or else, the default name *svelteApp*. If a directory with that name already exists, the program exits with an error.
 
-- `npx degit fermentationist/thinner-template`
-This command uses [**degit**](https://www.npmjs.com/package/degit) to clone the  [template repository](https://github.com/fermentationist/thinner-template) locally, creating the app.
+- `npx degit fermentationist/slender-template`
+This command uses [**degit**](https://www.npmjs.com/package/degit) to clone the  [template repository](https://github.com/fermentationist/slender-template) locally, creating the app.
 
 - `git init`
 The directory is initialized as a Git repository.
@@ -52,7 +56,7 @@ Once this short script has executed, you will have a running Svelte app!
 ---
 ## Credits
 
-**thinner**, and [**thinner-template**](https://github.com/fermentationist/thinner-template) were made by [**Dennis Hodges**](https://dennis-hodges.com), a Javascript developer.
+**slenderman**, and [**slender-template**](https://github.com/fermentationist/slender-template) were made by [**Dennis Hodges**](https://dennis-hodges.com), a Javascript developer.
 
 [**Svelte**](https://svelte.dev) was made by a very smart fellow named [**Rich Harris**](https://github.com/Rich-Harris). Thanks, Rich!
 

@@ -4,9 +4,9 @@ const babel = require ("rollup-plugin-babel");
 const path = require("path");
 
 const config = {
-    input: "src/thinner.js",
+    input: "src/slender.js",
     output: {
-        name: "dist/thinner.min.js",
+        name: "dist/slender.min.js",
         format: "cjs",
         banner: "#! /usr/bin/env node"
     },

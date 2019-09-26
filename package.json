@@ -1,18 +1,18 @@
 {
-  "name": "thinner",
+  "name": "slenderman",
   "version": "0.0.1",
-  "description": "thinner clones and installs thinner-template, a simple Svelte app template",
-  "main": "thinner.js",
+  "description": "slenderman clones and installs slender-template, a simple Svelte app template",
+  "main": "slender.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c -o dist/thinner.min.js"
+    "build": "rollup -c -o dist/slender.min.js"
   },
   "bin": {
-    "thinner": "dist/thinner.min.js"
+    "slenderman": "dist/slender.min.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fermentationist/thinner.git"
+    "url": "git+https://github.com/fermentationist/slenderman.git"
   },
   "keywords": [
     "svelte",
@@ -23,9 +23,9 @@
   "author": "fermentationist",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fermentationist/thinner/issues"
+    "url": "https://github.com/fermentationist/slenderman/issues"
   },
-  "homepage": "https://github.com/fermentationist/thinner#readme",
+  "homepage": "https://github.com/fermentationist/slenderman#readme",
   "dependencies": {
     "chalk": "^2.4.2",
     "init-package-json": "^1.10.3"
